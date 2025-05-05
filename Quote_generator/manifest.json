@@ -1,0 +1,11 @@
+{
+    "name":"Quote Generator",
+    "version":"1.0.0",
+    "description":"This is an externsion to genrerate quotes",
+    "manifest_version": 3,
+    "author":"Efrata Bayle",
+    "action":{
+        "default_popup":"popup.html",
+        "deault_title":"Quote Generator"
+    }
+}

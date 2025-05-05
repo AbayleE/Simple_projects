@@ -1,0 +1,14 @@
+{
+    "name": "Weatherly",
+    "version": "1.0.0",
+    "description":"This is a weather extension using openweather API",
+    "manifest_version": 3,
+    "author":"Efrata_Bayle",
+    "action": {
+        "default_popup":"Public/index.html",
+        "default_title":"Weatherly"
+    },
+    "permissions": [
+        "geolocation"
+    ]
+}

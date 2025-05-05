@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Work</title>
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles_w.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_container">
+            <h1>PomodoList</h1>
+        </div>
+        <div>
+            <svg class="waves" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-35z" />
+                </defs>
+
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+
+                </g>
+            </svg>
+        </div>
+    </div>
+
+    <div class="work_container">
+        <div class="todo" id="todo">
+            <h2>📝 To-Do List 📝</h2>
+            <div class="input-container">
+                <input type="text" id="taskinput" placeholder="Add a new task...">
+                <button class="btn_" id="add_task_btn"> Add </button>
+            </div>
+            <ul id="taskList"></ul>
+        </div>
+
+        <div class="timer">
+            <h2> ⏳ Pomodoro Timer ⏳ </h2>
+            <div class="timer_display">
+                <button class="btn_" id="increase_btn">+</button>
+                <p id="progress_display">25:00</p>
+                <button class="btn_" id="decrease_btn">-</button>
+            </div>
+            <div class="btn_pomodoro">
+                <button id="start">Start</button>
+                <button id="reset">Reset</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
