@@ -1,0 +1,183 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+h1,h2,h3,h4,h5,p {
+    padding: 0;
+    margin: 0;
+}
+
+
+.wordle_instructions {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    margin-top: 50px;
+    padding-left: 10px;
+    padding: 20px;
+    background: lightgoldenrodyellow;
+    border-radius: 12px;
+    line-height: 1.6;
+}
+
+.wordle_instructions i{
+    margin-left: 300px;
+    font-size: xx-large;
+    padding: 0;
+}
+
+.wordle_instructions h2{
+    margin: 5px;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wordle_instructions:hover{
+    transform: translateY(-5px);
+    box-shadow: 1px 1px 5px  rgb(195, 185, 163);
+ }
+.wordle_instructions li {
+    margin:  0 0 12px 12px;
+    padding-left: 8px;
+    list-style:upper-roman;
+}
+
+.highlight {
+    color: #3a7ca5;
+}
+
+.tile {
+    display: inline-flex;
+    width: 25px;
+    height: 25px;
+    padding: 2px;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.correct,
+.grid_item.correct {
+    background-color: #6aaa64;
+    color: white;
+}
+
+.present,
+.grid_item.present  {
+    background-color: #c9b458;
+    color: white;
+}
+
+.absent,
+.grid_item.absent  {
+    background-color: #787c7e;
+    color: white;
+}
+
+.main_div {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-top: 50px;
+    width: 800px;
+    height: auto;
+    padding: 10px;
+}
+
+.wordle_grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+    padding: 25px;
+
+}
+.grid_div{
+    background: #f8f8f8;
+    border: 1px solid  #dbdbdb;
+    box-shadow: 1px 2px 2px #dbdbdb;
+    border-radius: 12px;
+}
+
+.grid_div h1 {
+    font-size: 48px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.grid_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid hsl(0, 0%, 0% , 0.2);
+    padding: 10px;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+
+.key_div{
+    margin-top: 35px;
+    width: 800px;
+    padding: 5px;
+}
+
+.key_row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 800px;
+    margin: 5px;  
+}
+
+.key_item{
+    width: 60px;
+    height: 40px;
+    margin: 5px;
+    background-color: hsl(0, 0%, 18% , 0.8);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+
+.message_banner{
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-100%);
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    z-index: 2;
+    font-size: 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.message_banner.success {
+    background-color: #28a745;
+}
+
+.message_banner.error {
+    background-color: #dc3545;
+}
+
+.message_banner.info {
+    background-color: #007bff;
+}
